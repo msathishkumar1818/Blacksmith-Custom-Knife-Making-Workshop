@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Our Craft & Metallurgy Heritage | Vulcan & Co. Bladesmith Atelier</title>
+  <meta name="description" content="Discover the 27-year heritage of Vulcan & Co. Learn about our traditional coal-fired forging techniques, differential clay quenching, and Master Bladesmith Alden Cross.">
+  
+  <!-- Favicon / Browser Title Icon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="alternate icon" href="assets/images/favicon.svg">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['class', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            forge: {
+              ember: '#D95D24',
+              'ember-hover': '#BF4C17',
+              gold: '#C59B27',
+              steel: '#2A2E35',
+              dark: '#000000',
+              surface: '#0A0A0B',
+              border: '#22242B'
+            }
+          },
+          fontFamily: {
+            serif: ['Cinzel', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body class="bg-[#FAF6F0] dark:bg-[#000000] text-[#121316] dark:text-[#F7F5F0] transition-colors duration-300 antialiased selection:bg-[#D95D24] selection:text-white">
+
+  <!-- Branded Preloader -->
+  <div id="forge-loader" role="status" aria-label="Loading Vulcan Forge Atelier">
+    <div class="loader-anvil-wrapper">
+      <svg class="w-12 h-12 text-[#D95D24]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 5h14a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/>
+        <path d="M4 11v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/>
+        <path d="M12 5v15"/>
+      </svg>
+      <div class="loader-spark"></div>
+      <div class="loader-spark"></div>
+      <div class="loader-spark"></div>
+    </div>
+    <div class="loader-progress">
+      <div class="loader-progress-bar"></div>
+    </div>
+    <span class="mt-4 font-serif text-xs uppercase tracking-widest text-[#D1D7E0]">Entering Atelier History...</span>
+  </div>
+
+  <!-- Global Header (Fixed & Compact) -->
+  <header class="site-header fixed top-0 left-0 right-0 z-50 bg-[#FAF6F0]/96 dark:bg-[#000000]/96 backdrop-blur-md border-b border-[#EAE3D5] dark:border-[#1E2026]">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-14 sm:h-[60px]">
+        
+        <!-- Brand Logo & Identity (Single Line Guarantee) -->
+        <a href="index.html" class="flex items-center gap-2 sm:gap-2.5 group shrink-0 min-w-0 focus-visible:ring-2 focus-visible:ring-[#D95D24]">
+          <div class="brand-badge w-8 h-8 sm:w-9 sm:h-9 rounded-lg flex items-center justify-center text-[#D95D24] shrink-0">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3.5 17h17c-1.2-2.2-2.5-2.5-5.5-2.5H9c-3 0-4.3.3-5.5 2.5z" fill="currentColor" fill-opacity="0.22" stroke-width="1.6"/>
+              <path d="M7.5 17v3.5h9V17" stroke-width="1.6"/>
+              <path d="M12 2.5v11.5" stroke="#E86A2E" stroke-width="2.2"/>
+              <path d="M9.5 5.5L12 2.5l2.5 3" stroke="#E86A2E" stroke-width="1.8"/>
+              <path d="M5.5 7.5l2.5 2.5M18.5 7.5l-2.5 2.5" stroke="#C59B27" stroke-width="1.6"/>
+              <circle cx="12" cy="8.5" r="0.75" fill="#D95D24"/>
+            </svg>
+          </div>
+          <div class="flex flex-col justify-center min-w-0">
+            <span class="font-serif text-[15px] sm:text-base lg:text-lg font-bold tracking-wider text-[#121316] dark:text-[#F7F5F0] leading-none whitespace-nowrap">VULCAN &amp; CO.</span>
+            <span class="text-[7.5px] sm:text-[8.5px] tracking-[0.18em] sm:tracking-[0.22em] text-[#D95D24] uppercase font-semibold mt-0.5 leading-none whitespace-nowrap">Bladesmith Atelier</span>
+          </div>
+        </a>
+
+        <!-- Exactly 6 Primary Navigation Items (Desktop - Hidden on iPad Pro / Tablets) -->
+        <nav class="hidden xl:flex items-center space-x-1 rtl:space-x-reverse" aria-label="Main Navigation">
+          
+          <!-- 1. Home Dropdown (CLICK ONLY) -->
+          <div class="dropdown-wrapper">
+            <button type="button" class="dropdown-trigger nav-link flex items-center gap-1.5 focus-visible:ring-2 focus-visible:ring-[#D95D24]" aria-haspopup="true" aria-expanded="false" id="home-dropdown-btn-abt">
+              <span>Home</span>
+              <svg class="w-3.5 h-3.5 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="home-dropdown-btn-abt">
+              <a href="index.html" class="dropdown-item">
+                <span>Home 1: Heritage Forge</span>
+                <span class="text-[10px] text-[#9DA8B9] font-mono">Classic</span>
+              </a>
+              <a href="home-2.html" class="dropdown-item">
+                <span>Home 2: Master Blade Atelier</span>
+                <span class="text-[10px] text-[#9DA8B9] font-mono">Alt</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 2. Products -->
+          <a href="products.html" class="nav-link">Products</a>
+
+          <!-- 3. Custom Orders -->
+          <a href="custom-orders.html" class="nav-link">Custom Orders</a>
+
+          <!-- 4. Workshops -->
+          <a href="workshops.html" class="nav-link">Workshops</a>
+
+          <!-- 5. About Craft (ACTIVE) -->
+          <a href="about.html" class="nav-link active">About Craft</a>
+
+          <!-- 6. Contact (Directly Visible) -->
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <!-- Right Controls: RTL + Theme + CTA (Desktop) -->
+        <div class="hidden xl:flex items-center gap-2.5">
+          
+          <!-- RTL / LTR Toggle -->
+          <button type="button" class="dir-toggle-btn btn-icon-control w-8 h-8 p-0" aria-label="Switch Direction">
+            <span class="dir-text text-xs font-bold font-mono">RTL</span>
+          </button>
+
+          <!-- Dark / Light Theme Toggle -->
+          <button type="button" class="theme-toggle-btn btn-icon-control w-8 h-8 p-0" aria-label="Switch Theme">
+            <svg class="w-4 h-4 sun-icon hidden text-[#C59B27]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="w-4 h-4 moon-icon text-[#9DA8B9]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+
+          <!-- Direct CTA -->
+          <a href="custom-orders.html" class="btn-forge text-xs py-1.5 px-3 font-bold">
+            <span>Commission a Blade</span>
+            <svg class="w-3.5 h-3.5 rtl:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Tablet / Mobile Controls & Hamburger (Shown on iPad Pro & all screens < 1280px) -->
+        <div class="flex items-center gap-1.5 sm:gap-2 xl:hidden shrink-0">
+          <button type="button" class="dir-toggle-btn btn-icon-control w-8 h-8 p-0" aria-label="Switch Direction">
+            <span class="dir-text text-[10px] font-bold font-mono">RTL</span>
+          </button>
+          
+          <button type="button" class="theme-toggle-btn btn-icon-control w-8 h-8 p-0" aria-label="Switch Theme">
+            <svg class="w-4 h-4 sun-icon hidden text-[#C59B27]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="w-4 h-4 moon-icon text-[#9DA8B9]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+
+          <button type="button" id="mobile-menu-btn" class="btn-icon-control w-8 h-8 p-0" aria-label="Toggle navigation menu" aria-expanded="false">
+            <svg class="w-4 h-4 menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            <svg class="w-4 h-4 close-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobile-menu" class="xl:hidden">
+      <div class="px-4 pt-3 pb-6 space-y-1 max-w-lg mx-auto">
+        
+        <!-- Mobile Home Accordion -->
+        <div class="mobile-accordion-wrapper">
+          <button type="button" class="mobile-accordion-trigger mobile-nav-link w-full text-left" aria-expanded="false">
+            <span>Home Variations</span>
+            <svg class="w-4 h-4 accordion-chevron transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="mobile-accordion-content space-y-1">
+            <a href="index.html" class="block py-2 px-3 text-sm text-[#9DA8B9] hover:text-[#D95D24] rounded hover:bg-[#D95D24]/10">Home 1: Heritage Forge</a>
+            <a href="home-2.html" class="block py-2 px-3 text-sm text-[#9DA8B9] hover:text-[#D95D24] rounded hover:bg-[#D95D24]/10">Home 2: Master Blade Atelier</a>
+          </div>
+        </div>
+
+        <a href="products.html" class="mobile-nav-link">Products &amp; Catalog</a>
+        <a href="custom-orders.html" class="mobile-nav-link">Custom Orders</a>
+        <a href="workshops.html" class="mobile-nav-link">Classes &amp; Workshops</a>
+        <a href="about.html" class="mobile-nav-link active">About Craftsmanship</a>
+        <a href="contact.html" class="mobile-nav-link">Contact &amp; Forge Visit</a>
+
+        <!-- Mobile Drawer Utilities: Theme Mode & RTL -->
+        <div class="pt-3 border-t border-[#EAE3D5] dark:border-[#22242B] mt-3 flex items-center justify-between gap-3">
+          <button type="button" class="theme-toggle-btn flex-1 py-2.5 px-3 rounded-lg bg-[#FAF6F0] dark:bg-[#121316] border border-[#DDD5C7] dark:border-[#22242B] flex items-center justify-center gap-2.5 text-xs font-semibold text-[#121316] dark:text-[#F7F5F0] hover:border-[#D95D24] transition-colors" aria-label="Switch Theme">
+            <div class="w-6 h-6 rounded flex items-center justify-center bg-[#000000]/10 dark:bg-[#000000]/40 shrink-0">
+              <svg class="w-4 h-4 sun-icon hidden text-[#C59B27]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+              <svg class="w-4 h-4 moon-icon text-[#9DA8B9]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </div>
+            <span class="theme-label font-sans">Dark / Light Mode</span>
+          </button>
+          
+          <button type="button" class="dir-toggle-btn py-2.5 px-4 rounded-lg bg-[#FAF6F0] dark:bg-[#121316] border border-[#DDD5C7] dark:border-[#22242B] text-xs font-mono font-bold text-[#121316] dark:text-[#F7F5F0] hover:border-[#D95D24] transition-colors" aria-label="Switch Direction">
+            <span class="dir-text">RTL</span>
+          </button>
+        </div>
+
+        <div class="pt-2">
+          <a href="custom-orders.html" class="btn-forge w-full py-2.5 text-center justify-center font-bold text-xs">
+            Commission a Piece
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       MAIN CONTENT: EXACTLY 5 BESPOKE SECTIONS (INNER PAGE 04)
+       ========================================================================= -->
+  <main id="main-content">
+
+    <!-- =======================================================================
+         SECTION 1: HERO & GUILD HERITAGE NARRATIVE
+         ======================================================================= -->
+    <section class="py-20 bg-[#0A0A0B] dark:bg-[#000000] border-b border-[#1E2026] relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-7 space-y-5">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#181A1F] border border-[#D95D24]/40 text-[#D95D24] text-xs font-mono font-semibold">
+              <svg class="w-4 h-4 text-[#D95D24]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="M12 8v4"/><path d="M12 16h.01"/>
+              </svg>
+              <span>ESTABLISHED 1999 // BLACKWOOD HILLS ATELIER</span>
+            </div>
+
+            <h1 class="font-serif text-4xl sm:text-5xl font-bold text-[#F7F5F0] leading-tight flex flex-wrap items-center gap-3 sm:gap-4">
+              
+              <span>The Alchemy of Carbon, Fire &amp; the Anvil.</span>
+            </h1>
+
+            <p class="text-base text-[#F0F2F6] leading-relaxed font-normal">
+              For 27 years, Vulcan & Co. has rejected mass production to preserve the sacred craft of pattern-welded Damascus cutlery and architectural ironwork. We believe a tool should be as enduring as the memory of the hand that forged it.
+            </p>
+
+            <div class="grid grid-cols-3 gap-4 pt-4 border-t border-[#22242B]">
+              <div>
+                <span class="font-serif text-2xl font-bold text-[#D95D24]">1999</span>
+                <span class="text-xs text-[#D1D7E0] block mt-0.5 font-medium">Atelier Founded</span>
+              </div>
+              <div>
+                <span class="font-serif text-2xl font-bold text-[#F7F5F0]">10,400+</span>
+                <span class="text-xs text-[#D1D7E0] block mt-0.5 font-medium">Blades Commissioned</span>
+              </div>
+              <div>
+                <span class="font-serif text-2xl font-bold text-[#C59B27]">320</span>
+                <span class="text-xs text-[#D1D7E0] block mt-0.5 font-medium">Avg Damascus Folds</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5">
+            <div class="rounded-2xl overflow-hidden border border-[#22242B] shadow-2xl bg-[#121316]">
+              <img src="assets/images/about/p28.jpg" alt="Historical stone forge atelier workshop in Blackwood Hills" class="w-full h-80 object-cover filter contrast-125">
+              <div class="p-5 bg-[#0A0A0B] border-t border-[#22242B]">
+                <span class="text-xs text-[#C59B27] font-mono font-bold block">CONTINUOUS COAL FIRES</span>
+                <p class="text-xs text-[#D1D7E0] mt-1 font-normal">Our forge furnaces have burned continuously using sustainably harvested anthracite coal.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 2: MASTER BLADESMITH ALDEN CROSS & GUILD LINEAGE
+         ======================================================================= -->
+    <section class="py-24 bg-[#FAF6F0] dark:bg-[#0A0A0B] border-b border-[#EAE3D5] dark:border-[#1E2026]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-5">
+            <div class="rounded-2xl overflow-hidden border border-[#DDD5C7] dark:border-[#22242B] shadow-2xl relative">
+              <img src="assets/images/about/p29.jpg" alt="Master Bladesmith Alden Cross at the forge hearth" class="w-full h-[460px] object-cover object-top filter contrast-110">
+              <div class="absolute bottom-0 inset-x-0 p-6 bg-gradient-to-t from-[#000000] via-[#000000]/80 to-transparent text-[#F7F5F0]">
+                <span class="font-serif text-xl font-bold block">Alden Cross</span>
+                <span class="text-xs font-mono text-[#D95D24] uppercase">ABS Master Smith Certified</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#D95D24]">
+              <span class="w-6 h-[2px] bg-[#D95D24]"></span>
+              <span>The Master's Journey</span>
+            </div>
+
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#121316] dark:text-[#F7F5F0]">
+              "A knife is an intimate tool. It connects your intention directly to the material."
+            </h2>
+
+            <p class="text-sm sm:text-base text-[#1F2228] dark:text-[#F0F2F6] leading-relaxed font-normal">
+              Alden began his metallurgical training as an apprentice under traditional swordsmiths in Sakai, Osaka, mastering the differential clay quenching methods of the Katana. He later completed master ironwright residencies in Solingen, Germany, fusing European high-impact metallurgical toughness with Japanese razor keenness.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 items-stretch">
+              <div class="p-4 rounded-lg bg-[#FFFFFF] dark:bg-[#121316] border border-[#DDD5C7] dark:border-[#22242B] flex flex-col justify-between h-full shadow-sm">
+                <h3 class="font-serif text-sm font-bold text-[#121316] dark:text-[#F7F5F0] min-h-[1.5rem] flex items-center">Sakai Cutlery Guild</h3>
+                <p class="text-xs text-[#22252A] dark:text-[#E4E7EC] mt-1 font-medium flex-1">7 years intensive study in traditional San Mai hammer welding.</p>
+              </div>
+              <div class="p-4 rounded-lg bg-[#FFFFFF] dark:bg-[#121316] border border-[#DDD5C7] dark:border-[#22242B] flex flex-col justify-between h-full shadow-sm">
+                <h3 class="font-serif text-sm font-bold text-[#121316] dark:text-[#F7F5F0] min-h-[1.5rem] flex items-center">Solingen Guild Master</h3>
+                <p class="text-xs text-[#22252A] dark:text-[#E4E7EC] mt-1 font-medium flex-1">Specialized in sub-zero cryo-tempering and high-toughness spring steels.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 3: THERMAL METALLURGY & CLAY QUENCHING DOSSIER
+         ======================================================================= -->
+    <section class="py-24 bg-[#F1ECE1] dark:bg-[#000000] border-b border-[#DDD5C7] dark:border-[#1E2026]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#D95D24] mb-3">
+            <span class="w-6 h-[2px] bg-[#D95D24]"></span>
+            <span>Metallurgical Alchemy</span>
+            <span class="w-6 h-[2px] bg-[#D95D24]"></span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#121316] dark:text-[#F7F5F0]">
+            The Science of Fire & Quenching
+          </h2>
+          <p class="text-sm sm:text-base text-[#1F2228] dark:text-[#F0F2F6] mt-2 font-normal">
+            Achieving 62 HRC edge retention without catastrophic brittleness requires precise thermal control down to the single degree.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-6 space-y-4">
+            
+            <div class="p-5 rounded-xl bg-[#FFFFFF] dark:bg-[#121316] border border-[#DDD5C7] dark:border-[#22242B] shadow-md flex flex-col justify-between">
+              <div>
+                <span class="font-mono text-xs font-bold text-[#D95D24]">THERMAL CYCLE I</span>
+                <h3 class="font-serif text-lg font-bold text-[#121316] dark:text-[#F7F5F0] mt-1">Differential Clay Quenching</h3>
+              </div>
+              <p class="text-xs text-[#22252A] dark:text-[#E4E7EC] mt-2 leading-relaxed font-medium">
+                Refractory clay applied to the spine slows cooling during oil quench, creating a flexible 48 HRC spine and a glass-hard 63 HRC edge separated by a visible Hamon line.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-xl bg-[#FFFFFF] dark:bg-[#121316] border border-[#DDD5C7] dark:border-[#22242B] shadow-md flex flex-col justify-between">
+              <div>
+                <span class="font-mono text-xs font-bold text-[#C59B27]">THERMAL CYCLE II</span>
+                <h3 class="font-serif text-lg font-bold text-[#121316] dark:text-[#F7F5F0] mt-1">Liquid Nitrogen Cryogenic Bath</h3>
+              </div>
+              <p class="text-xs text-[#22252A] dark:text-[#E4E7EC] mt-2 leading-relaxed font-medium">
+                Submersion at -320°F transforms soft retained austenite into ultra-dense martensite crystals, eliminating micro-chipping along the razor apex.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-xl bg-[#FFFFFF] dark:bg-[#121316] border border-[#DDD5C7] dark:border-[#22242B] shadow-md flex flex-col justify-between">
+              <div>
+                <span class="font-mono text-xs font-bold text-[#D95D24]">THERMAL CYCLE III</span>
+                <h3 class="font-serif text-lg font-bold text-[#121316] dark:text-[#F7F5F0] mt-1">Triple Dual-Stage Tempering</h3>
+              </div>
+              <p class="text-xs text-[#22252A] dark:text-[#E4E7EC] mt-2 leading-relaxed font-medium">
+                Three separate 2-hour heating cycles relieve internal lattice stress, ensuring the finished blade can flex 45 degrees without taking a set.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="lg:col-span-6">
+            <div class="rounded-2xl overflow-hidden border border-[#DDD5C7] dark:border-[#22242B] shadow-2xl">
+              <img src="assets/images/about/p30.jpg" alt="Macro detail of differential clay quench wave hamon line on high carbon blade" class="w-full h-[450px] object-cover filter contrast-125">
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 4: ETHICAL MATERIALS & ANCIENT TIMBERS
+         ======================================================================= -->
+    <section class="py-20 bg-[#FAF6F0] dark:bg-[#0A0A0B] border-b border-[#EAE3D5] dark:border-[#1E2026]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+          <div>
+            <span class="text-xs font-mono uppercase tracking-widest text-[#D95D24] font-bold block">SUSTAINABLE HARVEST</span>
+            <h2 class="font-serif text-3xl font-bold text-[#121316] dark:text-[#F7F5F0] mt-1">
+              Ancient Materials with Provenance
+            </h2>
+            <p class="text-xs sm:text-sm text-[#1F2228] dark:text-[#E4E7EC] mt-1 font-medium">
+              Every piece of wood, antler, and fossilized tooth in our workshop is legally certified and ethically retrieved.
+            </p>
+          </div>
+          <span class="text-xs font-mono text-[#C59B27] font-bold px-3 py-1 rounded bg-[#C59B27]/10 border border-[#C59B27]/20 self-start md:self-auto">
+            Zero Deforestation Pledge
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+          
+          <div class="p-6 rounded-xl bg-[#FFFFFF] dark:bg-[#121316] border border-[#DDD5C7] dark:border-[#22242B] shadow-md flex flex-col justify-between h-full">
+            <h3 class="font-serif text-lg font-bold text-[#121316] dark:text-[#F7F5F0] h-12 flex items-start leading-snug">5,000-Yr Bog Oak</h3>
+            <p class="text-xs text-[#22252A] dark:text-[#E4E7EC] mt-2 font-medium leading-relaxed flex-1">Dredged from Irish peat bogs where mineral absorption turned the timber pitch black over millennia.</p>
+          </div>
+
+          <div class="p-6 rounded-xl bg-[#FFFFFF] dark:bg-[#121316] border border-[#DDD5C7] dark:border-[#22242B] shadow-md flex flex-col justify-between h-full">
+            <h3 class="font-serif text-lg font-bold text-[#121316] dark:text-[#F7F5F0] h-12 flex items-start leading-snug">Shed Elk &amp; Moose Antler</h3>
+            <p class="text-xs text-[#22252A] dark:text-[#E4E7EC] mt-2 font-medium leading-relaxed flex-1">Hand-collected naturally in the Rocky Mountain wilderness following annual spring shedding.</p>
+          </div>
+
+          <div class="p-6 rounded-xl bg-[#FFFFFF] dark:bg-[#121316] border border-[#DDD5C7] dark:border-[#22242B] shadow-md flex flex-col justify-between h-full">
+            <h3 class="font-serif text-lg font-bold text-[#121316] dark:text-[#F7F5F0] h-12 flex items-start leading-snug">Woolly Mammoth Molar</h3>
+            <p class="text-xs text-[#22252A] dark:text-[#E4E7EC] mt-2 font-medium leading-relaxed flex-1">10,000-year-old permafrost fossils stabilized in high-vacuum resin chambers.</p>
+          </div>
+
+          <div class="p-6 rounded-xl bg-[#FFFFFF] dark:bg-[#121316] border border-[#DDD5C7] dark:border-[#22242B] shadow-md flex flex-col justify-between h-full">
+            <h3 class="font-serif text-lg font-bold text-[#121316] dark:text-[#F7F5F0] h-12 flex items-start leading-snug">Reclaimed Barn Beams</h3>
+            <p class="text-xs text-[#22252A] dark:text-[#E4E7EC] mt-2 font-medium leading-relaxed flex-1">Heart pine and American chestnut salvaged from 19th-century historical barns.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 5: LIFETIME HEIRLOOM GUARANTEE & ATELIER VISIT CTA
+         ======================================================================= -->
+    <section class="py-20 bg-[#F1ECE1] dark:bg-[#000000]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="relative rounded-2xl overflow-hidden bg-[#0A0A0B] border border-[#D95D24]/40 p-8 sm:p-14 shadow-2xl">
+          <div class="max-w-3xl space-y-6">
+            <div class="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase text-[#D95D24]">
+              <span>THE VULCAN & CO. PLEDGE</span>
+            </div>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#F7F5F0]">
+              Forged for Your Lifetime. And Your Grandchildren's.
+            </h2>
+            <p class="text-sm sm:text-base text-[#F0F2F6] font-normal leading-relaxed">
+              Every blade stamped with our anvil mark carries free lifetime sharpening, complimentary handle re-oiling, and replacement coverage against metallurgical defects. We stand behind every hammer strike.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 pt-4">
+              <a href="contact.html" class="btn-forge text-xs py-3.5 px-8 font-bold text-center">
+                <span>Schedule an Atelier Visit</span>
+              </a>
+              <a href="custom-orders.html" class="btn-forge-outline text-xs py-3.5 px-8 font-bold text-center text-[#F7F5F0] border-[#F7F5F0]/30 hover:border-[#D95D24]">
+                <span>Start Custom Commission</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       GLOBAL FOOTER
+       ========================================================================= -->
+  <footer class="site-footer bg-[#000000] text-[#C8CCD4] border-t border-[#1E2026]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-16">
+        
+        <!-- Column 1: Brand & Forge Identity (2 spans) -->
+        <div class="lg:col-span-2 space-y-4">
+          <a href="index.html" class="flex items-center gap-2.5 sm:gap-3 group shrink-0 inline-flex focus-visible:ring-2 focus-visible:ring-[#D95D24]">
+            <div class="brand-badge w-9 h-9 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center text-[#D95D24] shrink-0">
+              <svg class="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3.5 17h17c-1.2-2.2-2.5-2.5-5.5-2.5H9c-3 0-4.3.3-5.5 2.5z" fill="currentColor" fill-opacity="0.22" stroke-width="1.6"/>
+                <path d="M7.5 17v3.5h9V17" stroke-width="1.6"/>
+                <path d="M12 2.5v11.5" stroke="#E86A2E" stroke-width="2.2"/>
+                <path d="M9.5 5.5L12 2.5l2.5 3" stroke="#E86A2E" stroke-width="1.8"/>
+                <path d="M5.5 7.5l2.5 2.5M18.5 7.5l-2.5 2.5" stroke="#C59B27" stroke-width="1.6"/>
+                <circle cx="12" cy="8.5" r="0.75" fill="#D95D24"/>
+              </svg>
+            </div>
+            <div class="flex flex-col justify-center min-w-0">
+              <span class="font-serif text-base sm:text-lg font-bold tracking-wider text-[#F7F5F0] leading-none whitespace-nowrap">VULCAN &amp; CO.</span>
+              <span class="text-[8px] sm:text-[9px] tracking-[0.2em] sm:tracking-[0.22em] text-[#D95D24] uppercase font-semibold mt-1 leading-none whitespace-nowrap">Bladesmith Atelier</span>
+            </div>
+          </a>
+          <p class="text-xs text-[#D1D7E0] leading-relaxed max-w-sm">
+            Dedicated to traditional coal-forged metallurgy, custom Damascus cutlery, and bespoke architectural ironwork. Built by hand in our workshop since 1999.
+          </p>
+          <div class="pt-2 text-xs text-[#D95D24] font-mono font-semibold">
+            <span>Forge Location: 404 Ironworks Lane, Blackwood Hills</span>
+          </div>
+        </div>
+
+        <!-- Column 2: Navigation -->
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="index.html" class="footer-link">Home 1: Heritage Forge</a></li>
+            <li><a href="home-2.html" class="footer-link">Home 2: Master Blade Atelier</a></li>
+            <li><a href="products.html" class="footer-link">Products & Categories</a></li>
+            <li><a href="custom-orders.html" class="footer-link">Custom Commissions</a></li>
+            <li><a href="workshops.html" class="footer-link">Classes & Workshops</a></li>
+            <li><a href="about.html" class="footer-link text-[#D95D24] font-semibold">About Craftsmanship</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Handforged Categories -->
+        <div>
+          <h4 class="footer-heading">Categories</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="products.html#culinary" class="footer-link">Damascus Chef Knives</a></li>
+            <li><a href="products.html#bushcraft" class="footer-link">Bushcraft & Camp Blades</a></li>
+            <li><a href="products.html#ironwork" class="footer-link">Architectural Ironwork</a></li>
+            <li><a href="products.html#leather" class="footer-link">Hand-Tooled Sheaths</a></li>
+            <li><a href="products.html#care" class="footer-link">Whetstones & Blade Care</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Forge Newsletter -->
+        <div>
+          <h4 class="footer-heading">Atelier Dispatch</h4>
+          <p class="text-xs text-[#D1D7E0] mb-3 leading-relaxed">
+            Receive notifications on limited blade drops and seasonal forge workshops.
+          </p>
+          <form class="space-y-2" onsubmit="event.preventDefault(); alert('Thank you for subscribing to the Forge Dispatch.');">
+            <input type="email" placeholder="Enter your email" required class="w-full px-3 py-2 text-xs rounded bg-[#121316] border border-[#22242B] text-[#F7F5F0] placeholder-[#8E95A2] focus:border-[#D95D24] focus:outline-none">
+            <button type="submit" class="btn-forge w-full text-xs py-2 font-bold">
+              <span>Subscribe</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="pt-8 border-t border-[#1E2026] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#D1D7E0]">
+        <p class="text-[#F7F5F0] font-medium">© 2026 Vulcan &amp; Co. Bladesmith Atelier. All rights reserved.</p>
+        <div class="flex items-center gap-6 text-[#D1D7E0]">
+          <span class="hover:text-[#D95D24] cursor-pointer transition-colors">Metallurgy Standards</span>
+          <span class="hover:text-[#D95D24] cursor-pointer transition-colors">Lifetime Warranty</span>
+          <span class="hover:text-[#D95D24] cursor-pointer transition-colors">Privacy Policy</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button type="button" id="scroll-to-top" aria-label="Scroll back to top">
+    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Core JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
